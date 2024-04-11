@@ -1,5 +1,5 @@
 FROM mvdan/shfmt:v3.8.0 as shfmt
-FROM koalaman/shellcheck:v0.9.0 as shellcheck
+FROM koalaman/shellcheck:v0.10.0 as shellcheck
 
 FROM debian:12
 RUN apt-get update && apt-get install gosu && apt-get clean &&  useradd ci
