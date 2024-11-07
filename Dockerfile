@@ -1,4 +1,4 @@
-FROM mvdan/shfmt:v3.9.0 AS shfmt
+FROM mvdan/shfmt:v3.10.0 AS shfmt
 FROM koalaman/shellcheck:v0.10.0 AS shellcheck
 
 FROM debian:12
