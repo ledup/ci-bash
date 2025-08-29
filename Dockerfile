@@ -1,7 +1,7 @@
-FROM mvdan/shfmt:v3.10.0 AS shfmt
-FROM koalaman/shellcheck:v0.10.0 AS shellcheck
+FROM mvdan/shfmt:v3.12.0 AS shfmt
+FROM koalaman/shellcheck:v0.11.0 AS shellcheck
 
-FROM debian:12
+FROM debian:13
 RUN apt-get update && apt-get install gosu && apt-get clean &&  useradd ci
 
 COPY --from=shfmt /bin/shfmt /usr/local/bin/shfmt
